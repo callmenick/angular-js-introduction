@@ -1,0 +1,60 @@
+//////////////////////////////////////////////////
+// load gulp
+//////////////////////////////////////////////////
+
+var gulp = require('gulp');
+
+//////////////////////////////////////////////////
+// load other gulp stuffs
+//////////////////////////////////////////////////
+
+var autoprefixer = require('gulp-autoprefixer');
+var gutil = require('gulp-util');
+var minifyCSS = require('gulp-minify-css');
+var rename = require('gulp-rename');
+var sass = require('gulp-sass');
+
+//////////////////////////////////////////////////
+// paths
+//////////////////////////////////////////////////
+
+var filePaths = {
+  sass: ['sass/**/*.scss']
+};
+
+var dirPaths = {
+  css: 'css/'
+};
+
+//////////////////////////////////////////////////
+// default task
+//////////////////////////////////////////////////
+
+gulp.task('default', ['watch']);
+
+//////////////////////////////////////////////////
+// styles task
+//////////////////////////////////////////////////
+
+gulp.task('styles', function() {
+  gulp.src(filePaths.sass)
+    .pipe(sass({
+      outputStyle: 'expanded'
+    })
+    .on('error', sass.logError))
+    .pipe(autoprefixer())
+    .pipe(gulp.dest(dirPaths.css))
+    .pipe(minifyCSS())
+    .pipe(rename({
+      suffix: '.min'
+    }))
+    .pipe(gulp.dest(dirPaths.css));
+});
+
+//////////////////////////////////////////////////
+// watcher task
+//////////////////////////////////////////////////
+
+gulp.task('watch', function() {
+  gulp.watch(filePaths.sass, ['styles']);
+});

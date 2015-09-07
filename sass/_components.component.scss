@@ -1,0 +1,70 @@
+/* -----------------------------------------------------------------------------
+
+  GENERIC COMPONENT
+  
+----------------------------------------------------------------------------- */
+
+.c-component {
+  font-size: 18px;
+
+  em {
+    font-style: normal;
+    text-decoration: underline;
+  }
+
+  input[type="text"],
+  button {
+    display: inline-block;
+    padding: 8px 12px;
+    border-radius: 0px;
+    font-family: inherit;
+    font-size: 14px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+
+  input {
+    color: inherit;
+    border: solid 2px $color--neutral-xxlight;
+  }
+
+  button {
+    color: #fff;
+    background: $color--theme;
+    border: none;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background: $color--theme-dark;
+  }
+}
+
+.c-component__table {
+  margin: 24px 0;
+  width: 100%;
+  text-align: left;
+  border: solid 1px $color--neutral-xxlight;
+  border-collapse: collapse;
+  
+  th,
+  td {
+    padding: 8px;
+    border: solid 1px $color--neutral-xxlight;
+  }
+
+  th {
+    color: $color--neutral-dark;
+  }
+}
+
+.c-component__box {
+  margin: 12px 0;
+  padding: 12px;
+  border: solid 1px $color--neutral-xxlight;
+}
+
+.c-component__text.pink {
+  color: rgb(255, 50, 100);
+}
