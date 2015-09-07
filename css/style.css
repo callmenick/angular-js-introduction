@@ -169,7 +169,7 @@ img {
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  background-color: #28aadc;
+  background-color: #ff6464;
 }
 
 .o-header-nav__link {
@@ -179,7 +179,7 @@ img {
 
 .o-header-nav__link:hover {
   color: #fff;
-  background-color: #166888;
+  background-color: #fd0000;
 }
 
 .o-header__title {
@@ -252,13 +252,13 @@ img {
   display: block;
   margin: 0;
   padding: 4px 24px;
-  border: solid 2px #28aadc;
+  border: solid 2px #ff6464;
 }
 
 .o-sub-nav__link:hover,
 .o-sub-nav__item.active .o-sub-nav__link {
   color: #fff;
-  background-color: #28aadc;
+  background-color: #ff6464;
 }
 
 @media all and (min-width: 720px) {
@@ -322,13 +322,13 @@ img {
 
 .c-component button {
   color: #fff;
-  background: #28aadc;
+  background: #ff6464;
   border: none;
   cursor: pointer;
 }
 
 .c-component button:hover {
-  background: #166888;
+  background: #fd0000;
 }
 
 .c-component__table {
